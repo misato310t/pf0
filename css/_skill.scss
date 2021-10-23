@@ -18,21 +18,9 @@
     }
 }
 
-// .skill-section-ttl{
-//     @include mq(sp) {
-//        margin-left: 2rem; 
-//     }
-// }
-
 .skill-ttl-img{
-    transform: translateY(.6rem);
+   transform: translateY(.5rem); 
 }
-
-// .skill-br-tab{
-//    @include mq(tab) {
-    //   display: none; 
-//    } 
-// }
 
 .skill-wrapper{
     display: flex;
@@ -88,6 +76,7 @@
     padding: 0.5rem;
     border: solid .5rem $color-accent;
     width: 32vw;
+    max-width: 28rem;
     }
 }
 

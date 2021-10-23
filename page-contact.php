@@ -7,10 +7,10 @@
 <div class="sp-header">
   <a href="<?php echo esc_url( home_url('/') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-sp.png" alt=""></a>
 </div>
-   <div class="list-header">
-      <div class="list-nav-wrapper container">
-          <div class="list-logo works-list-logo"><a href="<?php echo esc_url( home_url('/') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt=""></a></div>
-          <ul class="list-nav">
+   <div class="single-page-header">
+      <div class="single-page-nav-wrapper container">
+          <div class="single-page-logo"><a href="<?php echo esc_url( home_url('/') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt=""></a></div>
+          <ul class="single-page-nav">
               <li><a href="<?php echo esc_url( home_url('/') ); ?>">ＨＯＭＥ</a></li>
               <li><a href="<?php echo esc_url( home_url('/profile') ); ?>">自己紹介</a></li>
               <li><a href="<?php echo esc_url( home_url('/works') ); ?>">作品一覧</a></li>

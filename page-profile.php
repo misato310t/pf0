@@ -7,16 +7,14 @@
   
 
 <body>
-   <div class="list-header">
-      <div class="list-nav-wrapper container">
-          <div class="list-pc-logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo-min.png" alt="">
-          </div>
-          <div class="list-sp-logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo-sp-min.png" alt="">
-          </div>
+<div class="sp-header">
+  <a href="<?php echo esc_url( home_url('/') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-sp.png" alt=""></a>
+</div>
+   <div class="single-page-header">
+      <div class="single-page-nav-wrapper container">
+      <div class="single-page-logo"><a href="<?php echo esc_url( home_url('/') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt=""></a></div>
 
-          <ul class="list-nav">
+          <ul class="single-page-nav">
               <li><a href="<?php echo esc_url( home_url('/') ); ?>">ＨＯＭＥ</a></li>
               <li><a href="<?php echo esc_url( home_url('/works') ); ?>">作品一覧</a></li>
               <li><a href="<?php echo esc_url( home_url('/contact') ); ?>">お問い合わせ</a></li>
@@ -43,7 +41,7 @@
 
    
 
-    <div class="section-ttl about-section-ttl page-profile-ttl">自己紹介</div>
+    <div class="section-ttl page-profile-ttl">自己紹介</div>
       <div class="about-ttl-img page-profile-subttl"><img src="<?php echo get_template_directory_uri(); ?>/img/about-ttl-min.png" alt=""></div>
 
     <section class="profile-wrapper container">
@@ -81,6 +79,15 @@
         にしっかりとコミュニケーションをとらせていただきたいと思います。
        </dd> 
    </section>
+
+     <section class="single-message">
+       <div class="single-message-wrapper container">
+         <div class="single-message-ttl"><img src="<?php echo get_template_directory_uri(); ?>/img/single-message-min.png" alt=""></div>
+         <p>お客様の目指しているもの、実現したい思いの達成にむけて尽力させていただきます。<br>
+          お気軽にお問い合わせください。</p>
+         <div class="single-message-btn"><a href="<?php echo esc_url( home_url('/contact') ); ?>">お問い合わせ</a></div>
+       </div>
+     </section>
 
    <footer>
     <p>&copy; 2021　 misato portforio 　 All  Rights Reserved</p>

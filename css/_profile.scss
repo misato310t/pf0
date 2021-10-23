@@ -1,30 +1,56 @@
 
 
-
-.list-pc-logo{
-    width: 21vw;
-    max-width: 22rem;
-    margin:1rem 0 .5rem 3rem;
-
+.single-page-logo{
+    position: absolute;
+    top: 1rem;
+    left: 5vw;
+    width: 25vw;
+    max-width: 28rem;
+    min-width: 20rem;
+    &:hover{
+        opacity: 0.5;
+    }
     @include mq(sp) {
        display: none; 
     }
 }
 
-.list-sp-logo{
-    display: none;
+.single-page-header{
+    width: 100%;
+    background-color: $color-main;
+    height: 8rem;
+    position: relative;
+}
+.single-page-nav-wrapper{
+ display: flex;
+}
+
+.single-page-nav{
+    display: flex;
+    margin-left: auto;
+    li{
+        padding: 0 3rem;
+        font-size: 1.6rem;
+        line-height: 6rem;
+    }
     @include mq(sp) {
-       display: block; 
+       display: none; 
     }
 }
 
 
 .page-profile-ttl{
     transform: translateY(6rem);
+    @include mq(sp) {
+       transform: translateY(4rem); 
+    }
 }
 
 .page-profile-subttl{
     transform: translateY(6.5rem);
+    @include mq(sp) {
+       transform: translateY(5rem); 
+    }
 }
 
 .profile-wrapper{
@@ -35,7 +61,7 @@
     position: relative;
     @include mq(sp) {
         width: 100%;
-        margin: 20rem auto;
+        margin: 17rem auto;
     }
     &::after{
         content: url(../img/profile-cat-min.png);
@@ -66,12 +92,14 @@
     position: relative;
     cursor: pointer;
     @include mq(sp) {
-       font-size: 2rem;
+       font-size: clamp(14px, 3vw, 16px);
        padding: 1rem ; 
        margin-bottom: 2rem;
+       height: 4rem;
+       line-height: 2rem;
     }
     &::before{
-        content: url(../img/profile-q.png);
+        content: url(../img/profile-q-min.png);
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -79,7 +107,14 @@
         width: 4rem;
         height: 4rem;
         @include mq(sp) {
-             left: 2rem;
+             left: 1.5rem;
+             content: '';
+             display: inline-block;
+             width: 3rem;
+             height: 3rem;
+             background-image: url(../img/profile-q-min.png);
+             background-size: contain;
+             vertical-align: middle;
         }
     }
     &::after{
@@ -94,15 +129,19 @@
         border-top: solid .2rem $color-text;
         border-right: solid .2rem $color-text;
         transform: translateY(-50%) rotate(135deg);
+
+        @include mq(sp) {
+           right: 2rem; 
+        }
        }
 }
 
 
 .profile-a{
-   font-size: 2rem;
+   font-size: 1.6rem;
    margin: 0 4rem 2rem ;
-   padding:2rem ;
-   line-height: 1.5;
+   padding:4rem ;
+   line-height: 1.8;
    letter-spacing: .1rem;
    display: inline-block;
    text-align: left;
@@ -110,13 +149,55 @@
    border-radius: 4rem;
    @include mq(sp) {
       margin: 1rem 0 ; 
+      font-size: clamp(14px, 3vw, 16px);
+      padding: 2rem;
    }
    display: none;
 
 }
     
-
 .profile-q.open::after{
     transform: translateY(-50%) rotate(315deg);
     
+}
+
+.single-message{
+  background-color: $color-main;
+  margin-bottom: 10rem;
+}
+
+.single-message-wrapper{
+   width:60% ;
+   max-width: 60rem;
+   padding: 3rem 0;
+   margin: 0 auto;
+   p{
+       font-size:clamp(16px, 3vw, 20px) ;
+       padding: 3rem;
+       line-height: 1.5;
+       text-align: left;
+       @include mq(sp) {
+          padding: 1.5rem 0; 
+       }
+   }
+   @include mq(sp) {
+      width: 80%; 
+      font-size:clamp(14px, 3vw, 18px) ;
+   }
+}
+
+.single-message-btn{
+    text-align: center;
+    margin: 3rem 0;
+    a{
+        padding: 2rem 4rem;
+        border: .1rem solid $color-accent;
+        color: $color-accent;
+        background-color: white;
+        border-radius: 3rem;
+        &:hover{
+            background-color: $color-accent;
+            color: white;
+        }
+    }
 }

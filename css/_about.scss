@@ -13,8 +13,9 @@
     }
 
     @include mq(tab) {
-        height: 60vh;
-        background-position: 102% 102%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50%;
     }
 }
 
@@ -51,7 +52,7 @@
     text-align: center;
     position: relative;
     z-index: 2;
-    transform: translateY(-2.8rem);
+    transform: translateY(-3.2rem);
 }
 
 .about-back{
@@ -145,11 +146,14 @@
   position: relative;
     /*形状*/
     display: inline-block;
-  padding: 0 20px;
+    padding: 0 20px;
     color: #333;
     text-decoration: none;
     outline: none;
     font-size: 1.6rem;
+    &:hover{
+       opacity: 0.7; 
+    }
 }
 
 /*矢印と下線の形状*/

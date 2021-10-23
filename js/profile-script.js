@@ -1,7 +1,7 @@
 jQuery(function () {
     jQuery(".profile-q").on('click', function () {
-      jQuery(".profile-q").not(this).removeClass("open").next().slideUp(300);
-      jQuery(this).toggleClass("open").next().slideToggle(300);
+      jQuery(this).next().slideToggle(300);
+      jQuery(this).toggleClass('open', 300);
     });
   });
   
@@ -16,3 +16,28 @@ jQuery(function () {
   
   });
   
+  const TopBtn = document.querySelector('.totop');
+TopBtn.addEventListener('click', () =>{
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+
+window.addEventListener('scroll', function(){
+  if( 1000 < window.scrollY ) {
+    document.querySelector('.totop').classList.add('is-show');
+  } else {
+    document.querySelector('.totop').classList.remove('is-show');
+  }
+});
+
+
+window.addEventListener('scroll', function(){
+  if( 100 < window.scrollY ) {
+    document.querySelector('.sp-header').classList.add('is-show');
+  } else {
+    document.querySelector('.sp-header').classList.remove('is-show');
+  }
+});

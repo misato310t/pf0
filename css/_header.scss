@@ -7,7 +7,8 @@ header{
        height: 70rem; 
     }
     @include mq(sp) {
-       background: url(../img/top-s-min.png); 
+       background: url(../img/top-s-min.png);
+       background-size: cover; 
        background-position: 35% 0;
        height: auto;
     }
@@ -45,7 +46,7 @@ header{
     top: 15%;
     left: 21%; 
     width: 26vw;
-    min-width: 28rem;
+    min-width: 26rem;
     max-width: 33rem;
     &:hover{
         opacity: 0.5;
@@ -182,6 +183,9 @@ header{
     }
     img{
         padding:1rem 0 0 2.5rem ;
+        &:hover{
+            opacity: 0.5;
+        }
         @include mq(sp) {
            padding: 0 0 0 2.5rem;
         }

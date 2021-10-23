@@ -13,11 +13,6 @@
     }
 }
 
-.works-list-logo{
-   @include mq(sp) {
-      display: none; 
-   } 
-}
 
 .works-single-ttl{
     font-size: 2.2rem;

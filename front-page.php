@@ -7,14 +7,16 @@
   
   <body>
 
-    <div class="sp-header"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-sp-min.png" alt=""></div>
+    <div class="sp-header"><a href="<?php echo esc_url( home_url('/') ); ?>">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/logo-sp-min.png" alt="">
+    </a></div>
     <header>
      <div class="top-inner container">
            <div class="top-logo"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/logo-min.png" alt=""></a></div>
 
-           <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/top-sp-img-min.png" alt="" class="top-sp-img1"></a>
-           <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/top-sp-img2-min.png" alt="" class="top-sp-img2"></a>  
-           <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/top-sp-img3-min.png" alt="" class="top-sp-img3"></a>
+           <a href="<?php echo esc_url( home_url('/works/works1') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/top-sp-img-min.png" alt="" class="top-sp-img1"></a>
+           <a href="<?php echo esc_url( home_url('/works/works5') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/top-sp-img2-min.png" alt="" class="top-sp-img2"></a>  
+           <a href="<?php echo esc_url( home_url('/works/works3') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/top-sp-img3-min.png" alt="" class="top-sp-img3"></a>
 
            <a href="<?php echo esc_url( home_url('/works/works3') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/top-img-min.png" alt="" class="top-pc-img1"></a>
            <a href="<?php echo esc_url( home_url('/works/works5') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/top-img-2-min.png" alt="" class="top-pc-img2"></a>
@@ -61,17 +63,15 @@
       
       <div class="profile-img"><a href="<?php echo esc_url( home_url('/profile') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/profile-img.png" alt=""></a></div>
       <div class="profile-more-wrap">
-        <a href="#" class="profile-more">詳細へ</a>
+        <a href="<?php echo esc_url( home_url('/profile') ); ?>" class="profile-more">詳細へ</a>
       </div>
-      <div class="more-button about-more-btn"><a href="">詳しく見る</a></div>
+      <div class="more-button about-more-btn"><a href="<?php echo esc_url( home_url('/profile') ); ?>">詳しく見る</a></div>
 
     </section>
   
   <section class="works container">
-      <!-- <div class="works-section-ttl-img"> -->
-        <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/works-ttl-all-min.png" alt=""> -->
-      <!-- </div> -->
-      <div class="works-section-ttl">作品一覧</div>
+      
+   <div class="works-section-ttl">作品一覧</div>
       <div class="works-ttl-img"><img src="<?php echo get_template_directory_uri(); ?>/img/works-ttl-min.png" alt=""></div>
       <div class="works-ttl-back"></div>
         <div class="swiper-container">
@@ -101,11 +101,7 @@
   </section>
 
   <section id="skill" class="skill container">
-    <!-- <picture class="skill-section-ttl">
-      <source srcset="<?php echo get_template_directory_uri(); ?>/img/skill-ttl-sp-all.png" media="(max-width:767px)" >
-      <img src="<?php echo get_template_directory_uri(); ?>/img/skill-ttl-all.png" alt="">
-    </picture> -->
-
+    
     <div class="section-ttl skill-section-ttl">出来る事</div>
       <div class="skill-ttl-img"><img src="<?php echo get_template_directory_uri(); ?>/img/skill-ttl-min.png" alt=""></div>
     <div class="skill-wrapper">
@@ -130,10 +126,7 @@
   </section>
   
   <section class="contact container">
-    <!-- <picture class="contact-section-ttl">
-      <source srcset="<?php echo get_template_directory_uri(); ?>/img/contact-ttl-sp-all.png" media="(max-width:767px)" >
-      <img src="<?php echo get_template_directory_uri(); ?>/img/contact-ttl-all.png" alt="">
-    </picture> -->
+    
     <div class="section-ttl contact-section-ttl">お問い合わせ</div>
       <div class="contact-ttl-img"><img src="<?php echo get_template_directory_uri(); ?>/img/contact-ttl-min.png" alt=""></div>
     <div class="contact-ttl-back"></div>  

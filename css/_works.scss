@@ -29,7 +29,10 @@
   position: relative;
   z-index: 2;
   @include mq(sp) {
-    transform: translateY(-3rem);
+    transform: translateY(-3.5rem);
+  }
+  @include mq(tab) {
+   transform: translateY(.5rem); 
   }
 }
 
