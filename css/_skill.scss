@@ -1,0 +1,149 @@
+
+.skill{
+    max-width: 112rem;
+    width: 100%;
+    text-align: center;
+    height: 66rem;
+    margin-top: 4rem;
+    @include mq(sp) { 
+       padding-top: 12rem;
+       height: auto;
+       margin-top: .6rem;
+    }
+
+    @include mq(tab) {
+       height: auto; 
+       margin-top: 0;
+       padding-bottom: 8rem;
+    }
+}
+
+// .skill-section-ttl{
+//     @include mq(sp) {
+//        margin-left: 2rem; 
+//     }
+// }
+
+.skill-ttl-img{
+    transform: translateY(.6rem);
+}
+
+// .skill-br-tab{
+//    @include mq(tab) {
+    //   display: none; 
+//    } 
+// }
+
+.skill-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 6rem;
+    @include mq(sp) {
+       display: block;
+       margin-top: 4rem; 
+    }
+}
+
+.skill-item{
+    width: 32.8rem;
+    padding: 2rem;
+    border: solid 1.5rem $color-accent;
+    border-radius: 1rem;
+    dt{
+        font-size: 2rem;
+        position: relative;
+        margin-bottom: 3rem;
+        line-height: 1.5;
+        @include mq(tab) {
+           display: inline-block; 
+           font-size: clamp(14px, 3vw, 16px);
+        }
+        @include mq(sp) {
+           display: inline-block; 
+           font-size: clamp(14px, 3vw, 16px);
+        }
+    }
+    dd{
+        font-size: 1.6rem;
+        line-height: 1.8;
+        letter-spacing: .2rem;
+        text-align-last: left;
+        @include mq(tab) {
+           padding: 0 .5rem; 
+           font-size: clamp(14px, 3vw, 16px);
+        }
+        @include mq(sp) {
+            font-size: clamp(14px, 3vw, 16px);
+        }
+    }
+    @include mq(sp) {
+       width: 60vw;
+       min-width: 26rem;
+       margin:0 auto 2rem;
+       border: solid .5rem $color-accent; 
+    }
+
+    @include mq(tab) {
+    padding: 0.5rem;
+    border: solid .5rem $color-accent;
+    width: 32vw;
+    }
+}
+
+
+.skill-1{
+    dt{
+        &::before{
+            content: url(../img/skill-goods-min.png);
+            position: absolute;
+            width: 1rem;
+            height: 2rem;
+            top: 0;
+            left: 0;
+            @include mq(tab) {
+               left: -1.5rem; 
+            }
+            @include mq(sp) {
+               left: -2rem; 
+            }
+        }
+    }
+}
+
+.skill-2,.skill-3{
+    dt{
+        &::before{
+            content: url(../img/skill-goods-min.png);
+            position: absolute;
+            width: 1rem;
+            height: 2rem;
+            top: 0;
+            left: 1rem;
+            @include mq(sp) {
+               left: -1rem; 
+            }
+            @include mq(tab) {
+               left: -1rem; 
+            }
+        }
+    }
+}
+
+.skill-logo{
+    margin-bottom: 3rem;
+    @include mq(tab) {
+       width: 30vw; 
+    }
+}
+
+.fadein {
+    opacity : 0;
+    transform: translateY(40px);
+    transition: opacity 2s, transform .3s;
+    &.active{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+  }
+    

@@ -1,0 +1,37 @@
+
+footer{
+    text-align: center;
+    letter-spacing: .2rem;
+    background-color: $color-sub;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    @include mq(sp) {
+       height: 3rem;
+       line-height: 3rem; 
+       letter-spacing: 0;
+    }
+    p{
+       font-size: 1.4rem;
+       @include mq(sp) {
+          font-size: 1.2rem; 
+       }
+    }
+}
+
+.totop{
+    position: fixed;
+    right: 2.5rem;
+    bottom: 5rem;
+    width: 5rem;
+    height: 5rem;
+    display: none;
+    @include mq(sp) {
+       right: 0.5rem;
+       bottom: 3rem;
+       width: 4rem;
+       height: 4rem; 
+    }
+    &.is-show{
+       display: block;
+    }
+}

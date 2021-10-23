@@ -1,0 +1,122 @@
+
+
+
+.list-pc-logo{
+    width: 21vw;
+    max-width: 22rem;
+    margin:1rem 0 .5rem 3rem;
+
+    @include mq(sp) {
+       display: none; 
+    }
+}
+
+.list-sp-logo{
+    display: none;
+    @include mq(sp) {
+       display: block; 
+    }
+}
+
+
+.page-profile-ttl{
+    transform: translateY(6rem);
+}
+
+.page-profile-subttl{
+    transform: translateY(6.5rem);
+}
+
+.profile-wrapper{
+    margin: 24rem auto;
+    max-width: 80rem;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    @include mq(sp) {
+        width: 100%;
+        margin: 20rem auto;
+    }
+    &::after{
+        content: url(../img/profile-cat-min.png);
+        position: absolute;
+        top: -11.5rem;
+        right: 2rem;
+        width: 30rem;
+        height: 12rem;
+        @include mq(sp) {
+            content: url(../img/profile-cat-s-min.png);
+            position: absolute;
+            width: 15rem;
+            height: 6rem; 
+            top: -5.8rem;
+            right:4rem;
+        }
+    }
+}    
+.profile-q{
+    font-size: 2.2rem;
+    padding: 1rem 3rem;
+    margin-bottom: 2rem;
+    height: 5rem;
+    line-height: 3rem;
+    border-radius: 5rem;
+    letter-spacing: .2rem;
+    background-color: $color-subaccent;
+    position: relative;
+    cursor: pointer;
+    @include mq(sp) {
+       font-size: 2rem;
+       padding: 1rem ; 
+       margin-bottom: 2rem;
+    }
+    &::before{
+        content: url(../img/profile-q.png);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 4rem;
+        width: 4rem;
+        height: 4rem;
+        @include mq(sp) {
+             left: 2rem;
+        }
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        right: 5rem;
+        top: 50%;
+        transition: all 0.2s ease-in-out;
+        display: block;
+        width: .8rem;
+        height: .8rem;
+        border-top: solid .2rem $color-text;
+        border-right: solid .2rem $color-text;
+        transform: translateY(-50%) rotate(135deg);
+       }
+}
+
+
+.profile-a{
+   font-size: 2rem;
+   margin: 0 4rem 2rem ;
+   padding:2rem ;
+   line-height: 1.5;
+   letter-spacing: .1rem;
+   display: inline-block;
+   text-align: left;
+   background-color:$color-main; 
+   border-radius: 4rem;
+   @include mq(sp) {
+      margin: 1rem 0 ; 
+   }
+   display: none;
+
+}
+    
+
+.profile-q.open::after{
+    transform: translateY(-50%) rotate(315deg);
+    
+}

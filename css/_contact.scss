@@ -1,0 +1,215 @@
+
+.contact{
+    max-width: 112rem;
+    width: 100%;
+    // height: 109rem;
+    height: auto;
+    text-align: center;
+    position: relative;
+    margin-top: 2rem;
+    @include mq(sp) {
+       margin: 11rem 0 6rem; 
+       background-color: $color-subaccent;
+       height: auto;
+    }
+    @include mq(tab) {
+       margin-top: 4rem; 
+       height: auto;
+    }
+}
+
+.contact-section-ttl{
+    transform: translateY(-3.7rem);
+    &::after{
+        margin-left: -2.2rem;
+        @include mq(sp) {
+           margin-left: 0; 
+        }
+        @include mq(tab) {
+           margin-left: 0; 
+        }
+    }
+    &::before{
+        margin-right: -2.2rem;
+        @include mq(sp) {
+           margin-right: 0; 
+        }
+        @include mq(tab) {
+           margin-right: 0; 
+        }
+    }
+}
+
+.contact-ttl-img{
+    transform: translateY(-3rem);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-ttl-back{
+    width: 26rem;
+    height: 18rem;
+    background-color:$color-subaccent;
+    border-radius: 50%;
+    position: absolute;
+    top: -6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    display: none;
+    @include mq(sp) {
+     display: block; 
+    }
+}
+
+// .contact-section-ttl{
+//     @include mq(sp) {
+//        position: absolute;
+//        left: 50%;
+//        transform: translateX(-50%);
+//        top: -3rem; 
+//     }
+// }
+
+.contact-form-wrapper{
+    max-width: 82rem;
+    width: 100%;
+    height: auto;
+    margin: 4rem auto;
+    border: 3rem solid $color-subaccent;
+    border-radius: 2rem;
+    @include mq(sp) {
+       height: auto;
+       border:none;
+       margin: 2rem auto;
+       padding-bottom: 2rem;
+    
+    }
+    @include mq(tab) {
+       width: 80vw; 
+       max-width: 60rem;
+    }
+}
+
+.contact-form-inner{
+    max-width: 55rem;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 5rem;
+    position: relative;
+    padding-bottom: 5rem;
+    @include mq(sp) {
+       width: 98%; 
+       background-color: white;
+       padding-top: 2rem;
+       border-radius: 1rem;
+       height: auto;
+    }
+    @include mq(tab) {
+       padding: 5rem; 
+    }
+}
+
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"],
+.wpcf7 textarea{
+    width: 100%;
+    height: 5rem;
+    margin: 2rem 0 4rem ;
+    padding: 1rem 0;
+    border: none;
+    padding: 0 1rem;
+    background-color: $color-main;
+    @include mq(sp) {
+       width: 95%; 
+       margin: 2rem .5rem 3rem .8rem;
+       height: 4rem;
+    }
+}
+
+.wpcf7 textarea{
+    height: 25rem;
+    padding: 1rem;
+}
+
+.contact-name,.contact-mail,.contact-message{
+    display: inline-block;
+    font-size: 1.6rem;
+    position: relative;
+    @include mq(sp) {
+       margin-left: 2rem; 
+    }
+    &::after{
+       position: absolute;
+       content: "必須";
+       right: -5rem;
+       top: -.2rem;
+       width:2.5rem ;
+       height: 1em;
+       color: white;
+       background-color: red;
+       padding: .5rem;
+       font-size: 1.2rem;
+       border-radius: .5rem;
+    }
+}
+.contact-tel{
+    font-size: 1.6rem;
+    @include mq(sp) {
+       margin-left: 2rem;
+    }
+}
+
+.wpcf7-submit{
+    width: 15rem;
+    height: 5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3rem;
+    border: none;
+    background-color: $color-accent;
+    cursor: pointer;
+    &:hover{
+        background-color: white;
+        border: solid 1px $color-accent;
+        color: $color-accent;
+        box-shadow: .2rem .2rem .4rem $color-accent;
+    }
+    @include mq(sp) {
+       bottom: 2.8rem; 
+    }
+}
+
+span.wpcf7-not-valid-tip {
+    transform: translateY(-2.5rem);
+}
+
+.contact-response{
+    position: absolute;
+    bottom: -8rem;
+    font-size: 1.4rem;
+}
+
+.wpcf7-response-output{
+    margin: 0;
+
+}
+
+/*------固定ページのCSS-----*/
+
+.contact-page {
+    @include mq(sp) {
+       margin: 11rem 0 6rem; 
+    }
+}
+
+.contact-section-ttl-page{
+    margin-top: 4rem;
+    @include mq(sp) {
+       margin-top: 0; 
+    }
+}

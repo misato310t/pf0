@@ -1,0 +1,168 @@
+
+.works-list-ttl-wrap{
+    text-align: center;
+    padding-top: 6rem;
+    @include mq(sp) {
+       padding-top: 3rem; 
+    }
+    img{
+        @include mq(sp) {
+           width: 24rem;
+           height: 5rem;
+        }
+    }
+}
+
+.works-list-logo{
+   @include mq(sp) {
+      display: none; 
+   } 
+}
+
+.works-single-ttl{
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    @include mq(sp) {
+       font-size: 1.6rem; 
+    }
+}
+
+.works-single-ttl-goods{
+    text-align: center;
+}
+
+.works-single-wrapper{
+    display: flex;
+    margin-top: 5rem;
+    @include mq(sp) {
+       margin-top: 2rem;
+       flex-direction: column-reverse;
+       
+    }
+}
+
+.works-single-text{
+    width: 50%;
+    padding-top: 2rem;
+    @include mq(sp) {
+       width: 100%; 
+    }
+    
+        li{
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            position: relative;
+            padding-left: 2rem;
+            @include mq(sp) {
+               margin-left: 1.5rem; 
+            }
+            &::before{
+                content: url(../img/pencil-square.png);
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+}
+
+.works-single-subttl{
+    font-size: 1.8rem;
+    margin:3rem 0 ;
+    padding-left: 2rem;
+    line-height: 1.5;
+    position: relative;
+    @include mq(sp) {
+       font-size: 1.6rem;
+       margin: 1rem 1rem 3rem ;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 0.5rem;
+        height: 2em;
+        background-color: $color-accent;
+    }
+
+}
+
+.works-single-img{
+    &:hover{
+        opacity: 0.5;
+    }
+}
+
+.works-single-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-accent;
+    width: 20rem;
+    margin: 0 auto;
+    border-radius: 3rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    box-shadow: .2rem .2rem .4rem gray;
+    &:hover{
+        box-shadow: none;
+        background-color: white;
+        color: $color-accent;
+        border: 2px solid $color-accent;
+    }
+    @include mq(sp) {
+       width: 15rem; 
+       font-size: 1.2rem;
+       margin-top: 4rem;
+    }
+    a{
+        padding: 2rem 2.5rem;
+        position: relative;
+        @include mq(sp) {
+           padding: 1.5rem 1.5rem; 
+        }
+        &::after{
+            position: absolute;
+            content: url(../img/arrow-right.png);
+            top: 30%;
+            right: -1rem;
+            width: 1rem;
+            height: 1rem;
+            @include mq(sp) {
+              content: url(../img/arrow-right-black-s.png);
+              top: 37%;
+            }
+        }
+        &:hover{
+            &::after{
+                display: none;
+            }
+        }
+        
+    }
+}
+
+.works-view{
+display: flex;
+justify-content: space-around;
+margin-bottom: 3rem;
+margin-top: 10rem;
+  @include mq(sp) {
+     display: block; 
+  }
+}
+
+.works-view-sp{
+    @include mq(sp) {
+       display: none; 
+    }
+}
+
+.works-single-btn-wrap{
+    height: 5rem;
+}

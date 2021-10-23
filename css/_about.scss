@@ -1,0 +1,224 @@
+
+.about{
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    height: 60rem;
+    background: url(../img/about-back-min.png);
+    background-size: cover;
+    background-position: 30% 120%;
+    @include mq(sp) {
+       height: auto;
+       background: none; 
+    }
+
+    @include mq(tab) {
+        height: 60vh;
+        background-position: 102% 102%;
+    }
+}
+
+.section-back{
+    width: 44rem;
+    height: 33rem;
+    border-radius: 50%;
+    position: absolute;
+    background-color:#fff;
+    top: -11rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    @include mq(sp) {
+       width: 26rem;
+       height: 18rem; 
+       top: -6rem;
+    }
+}
+
+
+.about-section-ttl{
+    z-index: 2;
+    transform: translateY(-4.2rem);
+    &::before,&::after{
+        transform: translateY(2rem);
+        width: 10vw;
+        min-width: 6rem;
+    }
+    
+}
+
+.about-ttl-img{
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    transform: translateY(-2.8rem);
+}
+
+.about-back{
+    position: relative;
+    img{
+        position: absolute;
+        z-index: 0;
+        right: 0;
+        top: -25rem;
+        @include mq(sp) {
+           display: none; 
+        }
+        @include mq(tab) {
+            position: absolute;
+            opacity: 0.2;
+            top: -20rem;
+        }
+    }
+    p{
+        font-size: 1.8rem;
+        margin-top: 8rem;
+        position: absolute;
+        left: 20rem;
+        z-index: 2;
+        line-height: 1.8;
+        letter-spacing: .2rem;
+
+        @include mq(sp) {
+            // left: 0;
+            // top: 5rem;
+            position: static;
+            line-height: 1.5;
+            padding: 6rem 0 3rem;
+            font-size: clamp(14px, 3vw, 16px);
+            width:80vw;
+            max-width: 53rem;
+            margin: 8rem auto 0;
+            
+        }
+
+        @include mq(tab) {
+            left: 0;
+            margin: 17rem auto 0;
+            padding: 0 8rem;
+            font-size: 1.6rem;
+        }
+    }
+}
+
+
+
+
+.br-tab{
+    @include mq(tab) {
+       display: none;
+    }
+}
+
+.profile-img{
+    position: absolute;
+    top: 14rem;
+    left: 4rem;
+    z-index: 2;
+    img{
+        border-radius: 50%;
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+    @include mq(sp) {
+       top: 3rem;
+       left: 50%;
+       transform: translateX(-50%); 
+    }
+
+    @include mq(tab) {
+       left: 50%;
+       transform: translateX(-50%); 
+       top: 5rem;
+    }
+}
+
+.br-pc{
+    @include mq(sp) {
+       display: none; 
+    }
+}
+
+.profile-more{
+    /*矢印と下線の基点とするためrelativeを指定*/
+  position: relative;
+    /*形状*/
+    display: inline-block;
+  padding: 0 20px;
+    color: #333;
+    text-decoration: none;
+    outline: none;
+    font-size: 1.6rem;
+}
+
+/*矢印と下線の形状*/
+.profile-more::before{
+    content: '';
+    /*絶対配置で下線の位置を決める*/
+  position: absolute;
+    bottom:-8px;
+    left:15%;
+    /*下線の形状*/    
+    width: 85%;
+    height: 1px;
+  background:#333;
+    /*アニメーションの指定*/
+    transition: all .1s;
+}
+
+.profile-more::after{
+    content: '';
+    /*絶対配置で矢印の位置を決める*/
+  position: absolute;
+    bottom:-3px;
+    right:0;
+    /*矢印の形状*/    
+    width: 15px;
+    height:1px;
+  background:#333;
+    transform: rotate(35deg);
+    /*アニメーションの指定*/
+    transition: all .1s;
+}
+
+/*hoverした際の移動*/
+.profile-more:hover::before{
+    left:25%;
+}
+
+.profile-more:hover::after{
+    right:-10%;
+}
+
+.profile-more-wrap{
+    position: absolute;
+    top: 30rem;
+    left: 20rem;
+
+    @include mq(tab) {
+       left: 50%;
+       transform: translateX(-50%);
+       top: 38rem; 
+    }
+
+    @include mq(sp) {
+       display: none; 
+    }
+}
+
+
+.about-more-btn{
+    display: none;
+    @include mq(sp) {
+       display: block; 
+       left: 50%;
+       transform: translateX(-50%);
+       margin-bottom: 3rem;
+       a{
+           padding: 1rem 2rem;
+           height: 3.3rem;
+           line-height: 3.3rem;
+       }
+    }
+}

@@ -1,0 +1,91 @@
+
+$color-main:#FCF0EB ;
+$color-sub: #7ACECF;
+$color-accent:#FDB7B9;
+$color-subaccent:#D3ECE7;
+$color-text:#333333;
+
+$container: 1120px;
+
+$breakpoints: (
+'sp': 'screen and (max-width: 767px)', 
+'tab':'(min-width:768px)and(max-width: #{$container})',
+'pc': 'screen and (min-width: #{$container})', 
+) !default;
+@mixin mq($breakpoint: sp) {
+@media #{map-get($breakpoints, $breakpoint)} {
+ @content;
+}
+}
+
+/*=======共通CSS======*/
+
+html{
+    color: $color-text;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 10px;
+}
+
+
+.container{
+    max-width: 1120px;
+    margin: 0 auto;
+    @include mq(sp) {
+       width: 100vw; 
+       padding: 0 1.5rem;
+    }
+}
+
+.section-ttl{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    font-size: 2.4rem;
+    font-weight: bold;
+    &::before,&::after{
+        border-bottom: 2px solid;
+        content: "";
+        width: 10vw; 
+        min-width: 6rem;
+        transform: translateY(2rem);
+    }
+    
+    @include mq(sp) {
+        font-size: 1.8rem;
+    }
+}
+
+
+.more-button{
+    font-size: 1.4rem;
+    background-color: $color-sub;
+    color: white;
+    // display: inline-block;
+    width: 13rem;
+    border-radius: 2rem;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        display: block;
+        width: .8rem;
+        height: .8rem;
+        border-top: solid .2rem white;
+        border-right: solid .2rem white;
+        transform: translateY(-50%) rotate(50deg);
+       
+    }
+}
+
+@import"header";   /*フロントページ、section <ファーストビュー>*/ 
+@import"about";   /*フロントページ、section <自己紹介> */
+@import"works";   /*フロントページ、section <作品紹介> */
+@import"skill";   /*フロントページ、section <出来る事> */
+@import"contact";  /*フロントページ、section<お問い合わせ> */
+@import"footer";   /*フロントページ、section<フッター> */
+@import"works-list";  /*個別ページ、<作品一覧> */
+@import"profile";   /*個別ページ、<自己紹介> */
+@import"works-single";  /*個別ページ<作品紹介> */
