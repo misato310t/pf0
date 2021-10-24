@@ -36,14 +36,15 @@
          </div>
          <div class="drawer-background"></div>  
 
-   <div class="works-list-ttl-wrap ">
-     <img src="<?php echo get_template_directory_uri(); ?>/img/works-single-ttl-all.png" alt="">
+   <div class="single-page-works-ttl ">
+   <div class="works-section-ttl">作品紹介</div>
+      <div class="works-ttl-img"><img src="<?php echo get_template_directory_uri(); ?>/img/works-ttl-min.png" alt=""></div>
    </div>
 
     <section class="works-single container">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?><!--  ループ開始  -->
         <div class="works-single-ttl"><?php the_title(); ?></div>
-        <div class="works-single-ttl-goods"><img src="<?php echo get_template_directory_uri(); ?>/img/works-goods.png" alt=""></div>
+        <div class="works-single-ttl-goods"><img src="<?php echo get_template_directory_uri(); ?>/img/works-goods-min.png" alt=""></div>
         <div class="works-single-wrapper">
             <div class="works-single-text ">
                 <div class="works-single-subttl"><?php the_content(); ?></div>

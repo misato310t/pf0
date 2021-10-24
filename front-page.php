@@ -11,26 +11,29 @@
       <img src="<?php echo get_template_directory_uri(); ?>/img/logo-sp-min.png" alt="">
     </a></div>
     <header>
-     <div class="top-inner container">
-           <div class="top-logo"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/logo-min.png" alt=""></a></div>
+      <div class="top-inner container">
+         <div class="top-logo"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/logo-min.png" alt=""></a></div>
 
            <a href="<?php echo esc_url( home_url('/works/works1') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/top-sp-img-min.png" alt="" class="top-sp-img1"></a>
            <a href="<?php echo esc_url( home_url('/works/works5') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/top-sp-img2-min.png" alt="" class="top-sp-img2"></a>  
            <a href="<?php echo esc_url( home_url('/works/works3') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/top-sp-img3-min.png" alt="" class="top-sp-img3"></a>
 
-           <a href="<?php echo esc_url( home_url('/works/works3') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/top-img-min.png" alt="" class="top-pc-img1"></a>
-           <a href="<?php echo esc_url( home_url('/works/works5') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/top-img-2-min.png" alt="" class="top-pc-img2"></a>
-           <a href="<?php echo esc_url( home_url('/works/works1') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/top-img-3-min.png" alt="" class="top-pc-img3"></a>
-           
-            
+           <div class="top-pc-wrapper1">
+             <div class="top-pc-wrapper2">
+               <a href="<?php echo esc_url( home_url('/works/works3') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/top-img-min.png" alt="" class="top-pc-img1"></a>
+               <a href="<?php echo esc_url( home_url('/works/works5') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/top-img-2-min.png" alt="" class="top-pc-img2"></a>
+               <a href="<?php echo esc_url( home_url('/works/works1') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/top-img-3-min.png" alt="" class="top-pc-img3"></a>
+            </div>
+          </div>
+              
             <div class="top-scroll"><img src="<?php echo get_template_directory_uri(); ?>/img/scloll-min.png" alt=""></div>
            <ul class="header-nav">
              <li><a href="<?php echo esc_url( home_url('/profile') ); ?>">自己紹介</a></li>
              <li><a href="<?php echo esc_url( home_url('/works-list') ); ?>">作品一覧</a></li>
              <li><a href="#skill">出来る事</a></li>
              <li><a href="<?php echo esc_url( home_url('/contact') ); ?>">お問い合わせ</a></li>
-           </ul>
-       </div>
+            </ul>
+        </div>
         <div class="drawer-icon">
          <div class="drawer-icon-bars">
              <div class="drawer-icon-bar1"></div>

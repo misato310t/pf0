@@ -51,6 +51,12 @@ header{
     &:hover{
         opacity: 0.5;
     }
+    @include mq(tab) {
+       top: 0;
+       left: 13%; 
+       max-width: 26rem;
+    }
+   
     @include mq(sp) {
        display: none; 
     }    
@@ -79,6 +85,11 @@ header{
     &:hover{
         opacity: 0.5;
     }
+    @include mq(tab) {
+       
+       left: 0;
+       bottom: 0; 
+    }
     @include mq(sp) {
        display: none; 
     }
@@ -106,6 +117,10 @@ header{
     &:hover{
         opacity: 0.5;
     }
+    @include mq(tab) {
+       right: 0; 
+       max-width: 15rem;
+    }
     @include mq(sp) {
        display: none; 
     }
@@ -123,16 +138,45 @@ header{
     }
 }
 
+.top-pc-wrapper1{
+    @include mq(tab) { 
+        position: absolute;
+        top:15% ;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 68vw;
+        max-width: 55rem;
+    }
+
+}
+.top-pc-wrapper2{
+    @include mq(tab) { 
+        position: relative;
+        height: 39rem;
+    }
+}
+
 .header-nav{
     position: absolute;
     right: 0;
     top: 11rem;
-    width: 11rem;
+    width: 12vw;
+    max-width: 11rem;
+    @include mq(tab) {
+       right: 1rem; 
+    }
     li{
         font-size: 1.6rem;
         padding: 3rem  0;
+        @include mq(tab) {
+           padding: 2rem 0; 
+           font-size: clamp(14px, 2vw, 18px);
+        }
         &:hover{
             font-size: 1.7rem;
+            @include mq(tab) {
+                font-size: 1.6rem; 
+            }
         }
 
         a{
@@ -169,6 +213,9 @@ header{
     right: 5vw;
     bottom: 26% ;
     @include mq(sp) {
+       display: none; 
+    }
+    @include mq(tab) {
        display: none; 
     }
 }

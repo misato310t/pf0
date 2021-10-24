@@ -58,7 +58,7 @@ html {
 .more-button::after {
   content: "";
   position: absolute;
-  right: 2rem;
+  right: 1rem;
   top: 50%;
   display: block;
   width: .8rem;
@@ -139,6 +139,14 @@ header {
   opacity: 0.5;
 }
 
+@media (min-width: 768px) and (max-width: 1120px) {
+  .top-pc-img1 {
+    top: 0;
+    left: 13%;
+    max-width: 26rem;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .top-pc-img1 {
     display: none;
@@ -171,6 +179,13 @@ header {
 
 .top-pc-img2:hover {
   opacity: 0.5;
+}
+
+@media (min-width: 768px) and (max-width: 1120px) {
+  .top-pc-img2 {
+    left: 0;
+    bottom: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -209,6 +224,13 @@ header {
   opacity: 0.5;
 }
 
+@media (min-width: 768px) and (max-width: 1120px) {
+  .top-pc-img3 {
+    right: 0;
+    max-width: 15rem;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .top-pc-img3 {
     display: none;
@@ -230,11 +252,37 @@ header {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1120px) {
+  .top-pc-wrapper1 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 68vw;
+    max-width: 55rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1120px) {
+  .top-pc-wrapper2 {
+    position: relative;
+    height: 39rem;
+  }
+}
+
 .header-nav {
   position: absolute;
   right: 0;
   top: 11rem;
-  width: 11rem;
+  width: 12vw;
+  max-width: 11rem;
+}
+
+@media (min-width: 768px) and (max-width: 1120px) {
+  .header-nav {
+    right: 1rem;
+  }
 }
 
 .header-nav li {
@@ -242,8 +290,21 @@ header {
   padding: 3rem  0;
 }
 
+@media (min-width: 768px) and (max-width: 1120px) {
+  .header-nav li {
+    padding: 2rem 0;
+    font-size: clamp(14px, 2vw, 18px);
+  }
+}
+
 .header-nav li:hover {
   font-size: 1.7rem;
+}
+
+@media (min-width: 768px) and (max-width: 1120px) {
+  .header-nav li:hover {
+    font-size: 1.6rem;
+  }
 }
 
 .header-nav li a {
@@ -288,6 +349,12 @@ header {
 }
 
 @media screen and (max-width: 767px) {
+  .top-scroll {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1120px) {
   .top-scroll {
     display: none;
   }
@@ -664,7 +731,7 @@ header {
 
 .profile-more-wrap {
   position: absolute;
-  top: 30rem;
+  top: 32rem;
   left: 20rem;
 }
 
@@ -1471,7 +1538,7 @@ footer p {
 
 @media screen and (max-width: 767px) {
   .works-list-item {
-    margin: 5rem 0;
+    margin: 3rem 0;
   }
 }
 
@@ -1604,6 +1671,12 @@ footer p {
   padding: 0 3rem;
   font-size: 1.6rem;
   line-height: 6rem;
+}
+
+@media (min-width: 768px) and (max-width: 1120px) {
+  .single-page-nav li {
+    padding: 0 2rem;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1779,10 +1852,11 @@ footer p {
 }
 
 .single-message-wrapper p {
-  font-size: clamp(16px, 3vw, 20px);
+  font-size: clamp(16px, 3vw, 18px);
   padding: 3rem;
   line-height: 1.5;
   text-align: left;
+  letter-spacing: .2rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -1817,26 +1891,12 @@ footer p {
 }
 
 /*個別ページ、<自己紹介> */
-.works-list-ttl-wrap {
-  text-align: center;
-  padding-top: 6rem;
-}
-
-@media screen and (max-width: 767px) {
-  .works-list-ttl-wrap {
-    padding-top: 3rem;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .works-list-ttl-wrap img {
-    width: 24rem;
-    height: 5rem;
-  }
+.works-single {
+  margin: 6rem auto;
 }
 
 .works-single-ttl {
-  font-size: 2.2rem;
+  font-size: clamp(14px, 3vw, 20px);
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -1855,7 +1915,7 @@ footer p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -1870,7 +1930,12 @@ footer p {
 
 .works-single-text {
   width: 50%;
-  padding-top: 2rem;
+}
+
+@media (min-width: 768px) and (max-width: 1120px) {
+  .works-single-text {
+    padding-left: 1rem;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1884,6 +1949,12 @@ footer p {
   margin-top: 2rem;
   position: relative;
   padding-left: 2rem;
+}
+
+@media (min-width: 768px) and (max-width: 1120px) {
+  .works-single-text li {
+    margin-top: 1rem;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1904,10 +1975,10 @@ footer p {
 }
 
 .works-single-subttl {
-  font-size: 1.8rem;
+  font-size: clamp(14px, 2vw, 18px);
   margin: 3rem 0;
-  padding-left: 2rem;
-  line-height: 1.5;
+  padding-left: 1.5rem;
+  line-height: 1.2;
   position: relative;
 }
 
@@ -1930,8 +2001,24 @@ footer p {
   background-color: #FDB7B9;
 }
 
+.works-single-img {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .works-single-img:hover {
   opacity: 0.5;
+}
+
+@media screen and (max-width: 767px) {
+  .works-single-img {
+    width: 100%;
+  }
 }
 
 .works-single-btn {
@@ -1982,26 +2069,26 @@ footer p {
 }
 
 .works-single-btn a::after {
+  content: "";
   position: absolute;
-  content: url(../img/arrow-right.png);
-  top: 30%;
-  right: -1rem;
-  width: 1rem;
-  height: 1rem;
-}
-
-@media screen and (max-width: 767px) {
-  .works-single-btn a::after {
-    content: url(../img/arrow-right-black-s.png);
-    top: 37%;
-  }
+  right: 0;
+  top: 50%;
+  display: block;
+  width: .8rem;
+  height: .8rem;
+  border-top: solid 0.2rem #3f3e3e;
+  border-right: solid 0.2rem #3f3e3e;
+  -webkit-transform: translateY(-50%) rotate(50deg);
+          transform: translateY(-50%) rotate(50deg);
 }
 
 .works-single-btn a:hover::after {
-  display: none;
+  border-top: solid 0.2rem #FDB7B9;
+  border-right: solid 0.2rem #FDB7B9;
 }
 
 .works-view {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2017,6 +2104,27 @@ footer p {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1120px) {
+  .works-view {
+    width: 90%;
+    margin: 3rem auto;
+  }
+}
+
+.works-view-pc {
+  width: 47vw;
+}
+
+@media screen and (max-width: 767px) {
+  .works-view-pc {
+    width: 100%;
+  }
+}
+
+.works-view-sp {
+  width: 26vw;
+}
+
 @media screen and (max-width: 767px) {
   .works-view-sp {
     display: none;
@@ -2025,6 +2133,7 @@ footer p {
 
 .works-single-btn-wrap {
   height: 5rem;
+  margin: 4rem 0 9rem;
 }
 
 /*個別ページ<作品紹介> */

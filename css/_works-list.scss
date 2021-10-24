@@ -7,8 +7,6 @@
 
 }
 
-
-
 .works-list-wrapper{
     margin-bottom: 6rem;
 }
@@ -21,7 +19,7 @@
     grid-template-columns: repeat(auto-fit, minmax(28rem,1fr ));
 
     @include mq(sp) {
-       margin: 5rem 0; 
+       margin: 3rem 0; 
     }
 }
 

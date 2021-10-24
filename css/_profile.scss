@@ -32,6 +32,9 @@
         padding: 0 3rem;
         font-size: 1.6rem;
         line-height: 6rem;
+        @include mq(tab) {
+           padding: 0 2rem; 
+        }
     }
     @include mq(sp) {
        display: none; 
@@ -172,10 +175,11 @@
    padding: 3rem 0;
    margin: 0 auto;
    p{
-       font-size:clamp(16px, 3vw, 20px) ;
+       font-size:clamp(16px, 3vw, 18px) ;
        padding: 3rem;
        line-height: 1.5;
        text-align: left;
+       letter-spacing: .2rem;
        @include mq(sp) {
           padding: 1.5rem 0; 
        }
