@@ -7,9 +7,10 @@
 .works-single-ttl{
     font-size: clamp(14px, 3vw, 20px);
     text-align: center;
-    margin-bottom: 1rem;
+    margin:6rem 0 1rem;
     @include mq(sp) {
        font-size: 1.6rem; 
+       margin: 3rem 0 1rem;
     }
 }
 
@@ -36,27 +37,31 @@
     @include mq(sp) {
        width: 100%; 
     }
-    
-        li{
-            font-size: 1.4rem;
-            margin-top: 2rem;
-            position: relative;
-            padding-left: 2rem;
-            @include mq(tab) {
-               margin-top: 1rem; 
+    li{
+           
+         &:not(:first-child){
+
+             margin-top: 2rem;
+             font-size: 1.4rem;
+             position: relative;
+             padding-left: 2rem;
+             @include mq(tab) {
+                 margin-top: 1rem; 
+                }
+                @include mq(sp) {
+                    margin-left: 1.5rem; 
+                }
+                &::before{
+                    content: url(../img/pencil-square.png);
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    width: 2rem;
+                    height: 2rem;
+                }
             }
-            @include mq(sp) {
-               margin-left: 1.5rem; 
-            }
-            &::before{
-                content: url(../img/pencil-square.png);
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                left: 0;
-                width: 2rem;
-                height: 2rem;
-            }
+        
         }
 }
 
@@ -171,13 +176,13 @@ margin-top: 10rem;
 }
 
 .works-view-pc{
-    width: 47vw;
+    width: 40vw;
     @include mq(sp) {
        width: 100%; 
     }
 }
 .works-view-sp{
-    width: 26vw;
+    width: 20vw;
     @include mq(sp) {
        display: none; 
     }

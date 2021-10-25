@@ -22,21 +22,18 @@
     transform: translateY(-3.7rem);
     &::after{
         margin-left: -2.2rem;
+
         @include mq(sp) {
            margin-left: 0; 
         }
-        @include mq(tab) {
-           margin-left: 0; 
-        }
+        
     }
     &::before{
         margin-right: -2.2rem;
         @include mq(sp) {
            margin-right: 0; 
         }
-        @include mq(tab) {
-           margin-right: 0; 
-        }
+        
     }
 }
 
@@ -193,11 +190,12 @@ span.wpcf7-not-valid-tip {
 
 /*------固定ページのCSS-----*/
 
-.contact-page {
-    @include mq(sp) {
-       margin: 11rem 0 6rem; 
-    }
+.single-page-contact{
+    
+    margin-top: 10rem;
 }
+
+
 
 .contact-section-ttl-page{
     margin-top: 4rem;

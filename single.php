@@ -13,7 +13,7 @@
           <ul class="single-page-nav">
               <li><a href="<?php echo esc_url( home_url('/') ); ?>">ＨＯＭＥ</a></li>
               <li><a href="<?php echo esc_url( home_url('/profile') ); ?>">自己紹介</a></li>
-              <li><a href="<?php echo esc_url( home_url('/works') ); ?>">作品一覧</a></li>
+              <li><a href="<?php echo esc_url( home_url('/works-list') ); ?>">作品一覧</a></li>
               <li><a href="<?php echo esc_url( home_url('/contact') ); ?>">お問い合わせ</a></li>
           </ul>
         </div> 
@@ -27,44 +27,44 @@
          </div>
         </div>
         <div class="drawer-content">
-          <div class="drawer-items">
+          <nav class="drawer-items">
               <div class="drawer-item"><a href="<?php echo esc_url( home_url('/') ); ?>">HOME</a></div>
               <div class="drawer-item"><a href="<?php echo esc_url( home_url('/profile') ); ?>">自己紹介</a></div>
-              <div class="drawer-item"><a href="<?php echo esc_url( home_url('/works') ); ?>">作品一覧</a></div>
+              <div class="drawer-item"><a href="<?php echo esc_url( home_url('/works-list') ); ?>">作品一覧</a></div>
               <div class="drawer-item"><a href="<?php echo esc_url( home_url('/contact') ); ?>">お問い合わせ</a></div>
-          </div>
+          </nav>
          </div>
          <div class="drawer-background"></div>  
 
+         <section class="works-single container">
    <div class="single-page-works-ttl ">
-   <div class="works-section-ttl">作品紹介</div>
+   <h1 class="works-section-ttl">作品紹介</h1>
       <div class="works-ttl-img"><img src="<?php echo get_template_directory_uri(); ?>/img/works-ttl-min.png" alt=""></div>
    </div>
 
-    <section class="works-single container">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?><!--  ループ開始  -->
-        <div class="works-single-ttl"><?php the_title(); ?></div>
+        <h2 class="works-single-ttl"><?php the_title(); ?></h2>
         <div class="works-single-ttl-goods"><img src="<?php echo get_template_directory_uri(); ?>/img/works-goods-min.png" alt=""></div>
         <div class="works-single-wrapper">
-            <div class="works-single-text ">
-                <div class="works-single-subttl"><?php the_content(); ?></div>
+          <ul class="works-single-text ">
+                <li><div class="works-single-subttl"><?php the_content(); ?></div></li>
                 <li><?php the_field('dd1'); ?></li>
                 <li><?php the_field('dd2'); ?></li>
                 <li><?php the_field('dd3'); ?></li>
                 <li><?php the_field('dd4'); ?></li>
                 <?php if( get_field('dd5') ) { ?>
-                <p><li><?php the_field('dd5'); ?></li></p>
+                <li><p><?php the_field('dd5'); ?></p></li>
                 <?php } ?>
                 
                 
-            </div>
+            </ul>
             <div class="works-single-img">
-              <a href="<?php the_field('works-url'); ?>"target="_blank" rel="noopener noreferrer"><?php the_post_thumbnail('hull'); ?></a>
+              <a href="<?php the_field('works-url'); ?>" target="_blank" rel="noopener noreferrer"><?php the_post_thumbnail('hull'); ?></a>
             </div> 
           </div>
           <div class="works-single-btn-wrap">
             <div class="works-single-btn">
-              <a href="<?php the_field('works-url'); ?>"target="_blank" rel="noopener noreferrer">ＷＥＢサイトへ</a>
+              <a href="<?php the_field('works-url'); ?>" target="_blank" rel="noopener noreferrer">ＷＥＢサイトへ</a>
              </div>
           </div>
         <div class="works-view">

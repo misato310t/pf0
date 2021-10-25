@@ -7,12 +7,14 @@
   
   <body>
 
-    <div class="sp-header"><a href="<?php echo esc_url( home_url('/') ); ?>">
+    <div class="sp-header">
+      <a href="<?php echo esc_url( home_url('/') ); ?>">
       <img src="<?php echo get_template_directory_uri(); ?>/img/logo-sp-min.png" alt="">
-    </a></div>
+      </a>
+     </div>
     <header>
-      <div class="top-inner container">
-         <div class="top-logo"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/logo-min.png" alt=""></a></div>
+      <section class="top-inner container">
+         <h1 class="top-logo"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/logo-min.png" alt="misatoのportforio"></a></h1>
 
            <a href="<?php echo esc_url( home_url('/works/works1') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/top-sp-img-min.png" alt="" class="top-sp-img1"></a>
            <a href="<?php echo esc_url( home_url('/works/works5') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/top-sp-img2-min.png" alt="" class="top-sp-img2"></a>  
@@ -33,7 +35,7 @@
              <li><a href="#skill">出来る事</a></li>
              <li><a href="<?php echo esc_url( home_url('/contact') ); ?>">お問い合わせ</a></li>
             </ul>
-        </div>
+        </section>
         <div class="drawer-icon">
          <div class="drawer-icon-bars">
              <div class="drawer-icon-bar1"></div>
@@ -42,18 +44,18 @@
          </div>
         </div>
         <div class="drawer-content">
-          <div class="drawer-items">
+          <nav class="drawer-items">
               <div class="drawer-item"><a href="<?php echo esc_url( home_url('/profile') ); ?>">自己紹介</a></div>
-              <div class="drawer-item"><a href="<?php echo esc_url( home_url('/works') ); ?>">作品一覧</a></div>
+              <div class="drawer-item"><a href="<?php echo esc_url( home_url('/works-list') ); ?>">作品一覧</a></div>
               <div class="drawer-item"><a href="<?php echo esc_url( home_url('/contact') ); ?>">お問い合わせ</a></div>
-          </div>
+          </nav>
          </div>
          <div class="drawer-background"></div>    
     </header>
 
     <section class="about container">
       <div class="section-back"></div>
-      <div class="section-ttl about-section-ttl">自己紹介</div>
+      <h2 class="section-ttl about-section-ttl">自己紹介</h2>
       <div class="about-ttl-img"><img src="<?php echo get_template_directory_uri(); ?>/img/about-ttl-min.png" alt=""></div>
       <div class="about-back">
         <p>はじめまして。ＷＥＢ制作フリーランスのmisatoと申します。<br>
@@ -74,7 +76,7 @@
   
   <section class="works container">
       
-   <div class="works-section-ttl">作品一覧</div>
+   <h2 class="works-section-ttl">作品一覧</h2>
       <div class="works-ttl-img"><img src="<?php echo get_template_directory_uri(); ?>/img/works-ttl-min.png" alt=""></div>
       <div class="works-ttl-back"></div>
         <div class="swiper-container">
@@ -105,32 +107,32 @@
 
   <section id="skill" class="skill container">
     
-    <div class="section-ttl skill-section-ttl">出来る事</div>
+    <h2 class="section-ttl skill-section-ttl">出来る事</h2>
       <div class="skill-ttl-img"><img src="<?php echo get_template_directory_uri(); ?>/img/skill-ttl-min.png" alt=""></div>
     <div class="skill-wrapper">
       <div class="skill-item skill-1 fadein">
-        <dt>　ＬＰ、ＷＥＢサイトの<br class="skill-br-tab">　　　　　　コーディング</dt>
+        <h3>　ＬＰ、ＷＥＢサイトの<br class="skill-br-tab">　　　　　　コーディング</h3>
         <div class="skill-logo"><img src="<?php echo get_template_directory_uri(); ?>/img/skill-logo-html-min.png" alt=""></div>
-        <dd>ご用意していただいたデザインカンプなどから忠実、丁寧にコーディングいたします。お取引様が扱いやすいような分かりやすいコーディングを期日通りに仕上げます</dd>
+        <p>ご用意していただいたデザインカンプなどから忠実、丁寧にコーディングいたします。お取引様が扱いやすいような分かりやすいコーディングを期日通りに仕上げます</p>
       </div>
       <div class="skill-item skill-2 fadein">
-        <dt>ＷＥＢサイトに<br class="skill-br-tab">　　　　　　動きをつける</dt>
+        <h3>ＷＥＢサイトに<br class="skill-br-tab">　　　　　　動きをつける</h3>
         <div class="skill-logo"><img src="<?php echo get_template_directory_uri(); ?>/img/skill-logo-js-min.png" alt=""></div>
-        <dd>JavaScriptやjQueryを用いてサイトに動きをつけることが可能です。
+        <p>JavaScriptやjQueryを用いてサイトに動きをつけることが可能です。
           例えばスマートフォンなどのメニューボタンをクリックするとメニューが横からスライドして表示される、ような類です。
-          </dd>
+          </p>
       </div>
       <div class="skill-item skill-3 fadein">
-        <dt>ワードプレスで<br class="skill-br-tab">　　　　ＷＥＢサイト制作</dt>
+        <h3>ワードプレスで<br class="skill-br-tab">　　　　ＷＥＢサイト制作</h3>
         <div class="skill-logo"><img src="<?php echo get_template_directory_uri(); ?>/img/skill-logo-wp-min.png" alt=""></div>
-        <dd>オリジナルサイトをワードプレスで構築可能です。プラグインを用いてカスタム投稿やカスタムメニュー、お問い合わせ機能を実装していきます。</dd>
+        <p>オリジナルサイトをワードプレスで構築可能です。プラグインを用いてカスタム投稿やカスタムメニュー、お問い合わせ機能を実装していきます。</p>
       </div>
     </div>
   </section>
   
   <section class="contact container">
     
-    <div class="section-ttl contact-section-ttl">お問い合わせ</div>
+    <h2 class="section-ttl contact-section-ttl">お問い合わせ</h2>
       <div class="contact-ttl-img"><img src="<?php echo get_template_directory_uri(); ?>/img/contact-ttl-min.png" alt=""></div>
     <div class="contact-ttl-back"></div>  
       <div class="contact-form-wrapper">
@@ -138,7 +140,7 @@
           <?php echo do_shortcode('[contact-form-7 id="92" title="コンタクトフォーム 1"]'); ?>
         </div>
       </div>
-    </div>
+    
   </section>
 
   <footer>

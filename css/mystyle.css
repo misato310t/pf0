@@ -36,6 +36,7 @@ html {
   content: "";
   width: 10vw;
   min-width: 6rem;
+  max-width: 13rem;
   -webkit-transform: translateY(2rem);
           transform: translateY(2rem);
 }
@@ -1072,7 +1073,7 @@ header {
   border-radius: 1rem;
 }
 
-.skill-item dt {
+.skill-item h3 {
   font-size: 2rem;
   position: relative;
   margin-bottom: 3rem;
@@ -1080,20 +1081,20 @@ header {
 }
 
 @media (min-width: 768px) and (max-width: 1120px) {
-  .skill-item dt {
+  .skill-item h3 {
     display: inline-block;
     font-size: clamp(14px, 3vw, 16px);
   }
 }
 
 @media screen and (max-width: 767px) {
-  .skill-item dt {
+  .skill-item h3 {
     display: inline-block;
     font-size: clamp(14px, 3vw, 16px);
   }
 }
 
-.skill-item dd {
+.skill-item p {
   font-size: 1.6rem;
   line-height: 1.8;
   letter-spacing: .2rem;
@@ -1101,14 +1102,14 @@ header {
 }
 
 @media (min-width: 768px) and (max-width: 1120px) {
-  .skill-item dd {
+  .skill-item p {
     padding: 0 .5rem;
     font-size: clamp(14px, 3vw, 16px);
   }
 }
 
 @media screen and (max-width: 767px) {
-  .skill-item dd {
+  .skill-item p {
     font-size: clamp(14px, 3vw, 16px);
   }
 }
@@ -1239,23 +1240,11 @@ header {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1120px) {
-  .contact-section-ttl::after {
-    margin-left: 0;
-  }
-}
-
 .contact-section-ttl::before {
   margin-right: -2.2rem;
 }
 
 @media screen and (max-width: 767px) {
-  .contact-section-ttl::before {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1120px) {
   .contact-section-ttl::before {
     margin-right: 0;
   }
@@ -1447,10 +1436,8 @@ span.wpcf7-not-valid-tip {
 }
 
 /*------固定ページのCSS-----*/
-@media screen and (max-width: 767px) {
-  .contact-page {
-    margin: 11rem 0 6rem;
-  }
+.single-page-contact {
+  margin-top: 10rem;
 }
 
 .contact-section-ttl-page {
@@ -1530,22 +1517,24 @@ footer p {
 .works-list-item {
   display: -ms-grid;
   display: grid;
-  gap: 2rem;
+  grid-gap: 3rem 2rem;
   margin: 8rem 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-grid-columns: (minmax(28rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
 }
 
 @media screen and (max-width: 767px) {
   .works-list-item {
-    margin: 3rem 0;
+    margin: 3rem;
   }
 }
 
 .works-list-item-li {
   background-color: #FCF0EB;
   text-align: center;
-  margin-bottom: 3rem;
   border-radius: 1rem;
 }
 
@@ -1556,12 +1545,7 @@ footer p {
   }
 }
 
-.works-list-item-li dt {
-  font-size: 1.8rem;
-  margin: 3rem 0 1.5rem 0;
-}
-
-.works-list-item-li dd {
+.works-list-item-li p {
   font-size: 1.6rem;
   margin: 3rem 4rem;
   position: relative;
@@ -1572,7 +1556,7 @@ footer p {
   text-align: left;
 }
 
-.works-list-item-li dd::before {
+.works-list-item-li p::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1584,16 +1568,21 @@ footer p {
   background-color: #FDB7B9;
 }
 
-.works-list-item-li dd.works-list-img3 {
+.works-list-item-li p.works-list-img3 {
   font-size: 1.4rem;
 }
 
-.works-list-item-li dd.works-list-img4 {
+.works-list-item-li p.works-list-img4 {
   font-size: 1.4rem;
 }
 
-.works-list-item-li dd.works-list-img5 {
+.works-list-item-li p.works-list-img5 {
   font-size: 1.4rem;
+}
+
+.works-list-item-ttl {
+  font-size: 1.8rem;
+  margin: 3rem 0 1.5rem 0;
 }
 
 .works-list-img {
@@ -1631,7 +1620,7 @@ footer p {
 .single-page-logo {
   position: absolute;
   top: 1rem;
-  left: 5vw;
+  left: 3vw;
   width: 25vw;
   max-width: 28rem;
   min-width: 20rem;
@@ -1651,10 +1640,10 @@ footer p {
   width: 100%;
   background-color: #FCF0EB;
   height: 8rem;
-  position: relative;
 }
 
 .single-page-nav-wrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1686,26 +1675,26 @@ footer p {
 }
 
 .page-profile-ttl {
-  -webkit-transform: translateY(6rem);
-          transform: translateY(6rem);
+  -webkit-transform: translateY(-19rem);
+          transform: translateY(-19rem);
 }
 
 @media screen and (max-width: 767px) {
   .page-profile-ttl {
-    -webkit-transform: translateY(4rem);
-            transform: translateY(4rem);
+    -webkit-transform: translateY(-13rem);
+            transform: translateY(-13rem);
   }
 }
 
 .page-profile-subttl {
-  -webkit-transform: translateY(6.5rem);
-          transform: translateY(6.5rem);
+  -webkit-transform: translateY(-18rem);
+          transform: translateY(-18rem);
 }
 
 @media screen and (max-width: 767px) {
   .page-profile-subttl {
-    -webkit-transform: translateY(5rem);
-            transform: translateY(5rem);
+    -webkit-transform: translateY(-12rem);
+            transform: translateY(-12rem);
   }
 }
 
@@ -1727,7 +1716,7 @@ footer p {
 .profile-wrapper::after {
   content: url(../img/profile-cat-min.png);
   position: absolute;
-  top: -11.5rem;
+  top: -8rem;
   right: 2rem;
   width: 30rem;
   height: 12rem;
@@ -1739,7 +1728,7 @@ footer p {
     position: absolute;
     width: 15rem;
     height: 6rem;
-    top: -5.8rem;
+    top: -2.8rem;
     right: 4rem;
   }
 }
@@ -1841,17 +1830,16 @@ footer p {
 
 .single-message {
   background-color: #FCF0EB;
-  margin-bottom: 10rem;
 }
 
-.single-message-wrapper {
+.single-message .single-message-wrapper {
   width: 60%;
   max-width: 60rem;
   padding: 3rem 0;
   margin: 0 auto;
 }
 
-.single-message-wrapper p {
+.single-message .single-message-wrapper p {
   font-size: clamp(16px, 3vw, 18px);
   padding: 3rem;
   line-height: 1.5;
@@ -1860,24 +1848,24 @@ footer p {
 }
 
 @media screen and (max-width: 767px) {
-  .single-message-wrapper p {
+  .single-message .single-message-wrapper p {
     padding: 1.5rem 0;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .single-message-wrapper {
+  .single-message .single-message-wrapper {
     width: 80%;
     font-size: clamp(14px, 3vw, 18px);
   }
 }
 
-.single-message-btn {
+.single-message .single-message-btn {
   text-align: center;
   margin: 3rem 0;
 }
 
-.single-message-btn a {
+.single-message .single-message-btn a {
   padding: 2rem 4rem;
   border: 0.1rem solid #FDB7B9;
   color: #FDB7B9;
@@ -1885,7 +1873,7 @@ footer p {
   border-radius: 3rem;
 }
 
-.single-message-btn a:hover {
+.single-message .single-message-btn a:hover {
   background-color: #FDB7B9;
   color: white;
 }
@@ -1898,12 +1886,13 @@ footer p {
 .works-single-ttl {
   font-size: clamp(14px, 3vw, 20px);
   text-align: center;
-  margin-bottom: 1rem;
+  margin: 6rem 0 1rem;
 }
 
 @media screen and (max-width: 767px) {
   .works-single-ttl {
     font-size: 1.6rem;
+    margin: 3rem 0 1rem;
   }
 }
 
@@ -1944,26 +1933,26 @@ footer p {
   }
 }
 
-.works-single-text li {
-  font-size: 1.4rem;
+.works-single-text li:not(:first-child) {
   margin-top: 2rem;
+  font-size: 1.4rem;
   position: relative;
   padding-left: 2rem;
 }
 
 @media (min-width: 768px) and (max-width: 1120px) {
-  .works-single-text li {
+  .works-single-text li:not(:first-child) {
     margin-top: 1rem;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .works-single-text li {
+  .works-single-text li:not(:first-child) {
     margin-left: 1.5rem;
   }
 }
 
-.works-single-text li::before {
+.works-single-text li:not(:first-child)::before {
   content: url(../img/pencil-square.png);
   position: absolute;
   top: 50%;
@@ -2112,7 +2101,7 @@ footer p {
 }
 
 .works-view-pc {
-  width: 47vw;
+  width: 40vw;
 }
 
 @media screen and (max-width: 767px) {
@@ -2122,7 +2111,7 @@ footer p {
 }
 
 .works-view-sp {
-  width: 26vw;
+  width: 20vw;
 }
 
 @media screen and (max-width: 767px) {
