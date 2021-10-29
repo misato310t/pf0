@@ -129,16 +129,7 @@
            padding: 1.5rem 1.5rem; 
         }
         &::after{
-            // position: absolute;
-            // content: url(../img/arrow-right.png);
-            // top: 30%;
-            // right: -1rem;
-            // width: 1rem;
-            // height: 1rem;
-            // @include mq(sp) {
-            //   content: url(../img/arrow-right-black-s.png);
-            //   top: 37%;
-            // }
+            
             content: "";
             position: absolute;
             right: 0;
@@ -177,12 +168,14 @@ margin-top: 10rem;
 
 .works-view-pc{
     width: 40vw;
+    max-width: 60rem;
     @include mq(sp) {
        width: 100%; 
     }
 }
 .works-view-sp{
     width: 20vw;
+    max-width: 30rem;
     @include mq(sp) {
        display: none; 
     }

@@ -57,7 +57,7 @@
 }
 
 .profile-wrapper{
-    margin: 24rem auto;
+    margin: 24rem auto 10rem;
     max-width: 80rem;
     width: 90%;
     text-align: center;
@@ -84,7 +84,7 @@
     }
 }    
 .profile-q{
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     padding: 1rem 3rem;
     margin-bottom: 2rem;
     height: 5rem;
@@ -192,6 +192,7 @@
 .single-message-btn{
     text-align: center;
     margin: 3rem 0;
+    font-size: 1.4rem;
     a{
         padding: 2rem 4rem;
         border: .1rem solid $color-accent;

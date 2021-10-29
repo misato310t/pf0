@@ -35,7 +35,7 @@
              <li><a href="#skill">出来る事</a></li>
              <li><a href="<?php echo esc_url( home_url('/contact') ); ?>">お問い合わせ</a></li>
             </ul>
-        </section>
+    </section>
         <div class="drawer-icon">
          <div class="drawer-icon-bars">
              <div class="drawer-icon-bar1"></div>
@@ -100,7 +100,7 @@
         </div>
         
           <div class="more-button works-more">
-            <a href="">一覧へ</a>
+            <a href="<?php echo esc_url( home_url('/works-list') ); ?>">一覧へ</a>
           </div>
         
   </section>
